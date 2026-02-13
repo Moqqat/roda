@@ -1,0 +1,18 @@
+{
+  "name": "RODA Dev",
+  "dockerComposeFile": [
+    "../docker-compose.dev.yml"
+  ],
+  "service": "dev",
+  "workspaceFolder": "/workspaces/roda",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}

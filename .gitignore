@@ -16,3 +16,15 @@ roda-cas/overlays/
 **/.factorypath
 .vscode/
 **/**/*.log.txt
+
+# Local dev overrides
+docker-compose.dev.local.yml
+env/dev.local.env
+
+# Local docker-compose overrides / backups
+**/docker-compose.override.y*ml
+**/docker-compose.devlocal.y*ml
+**/*.bak
+
+# Local instance props (om lokal)
+roda/config/roda-core.properties
