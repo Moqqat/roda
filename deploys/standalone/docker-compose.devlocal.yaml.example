@@ -1,0 +1,14 @@
+services:
+  roda:
+    build:
+      context: ../..
+      dockerfile: docker/Dockerfile
+    image: roda-local:dev
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - solr
+      - openldap
+      - clamd
+      - siegfried

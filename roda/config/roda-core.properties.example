@@ -1,0 +1,16 @@
+# Aktivera LDAP-autentisering
+auth.method = ldap
+
+# URL till din container (använd servicenamnet från docker-compose)
+auth.ldap.url = ldap://openldap:1389
+
+# Bas-DN där RODA ska leta efter användare
+auth.ldap.base_dn = ou=users,dc=roda,dc=org
+
+# DN för den användare RODA använder för att "slå upp" andra (Bind DN)
+# Bitnami använder ofta admin-kontot du skapade i env
+auth.ldap.bind_dn = cn=admin,dc=roda,dc=org
+auth.ldap.bind_password = roda
+
+# Hur RODA hittar användaren baserat på inloggningsnamnet
+auth.ldap.user_filter = (cn={0})
