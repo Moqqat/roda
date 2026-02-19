@@ -1,0 +1,10 @@
+services:
+  openldap:
+    image: docker.io/bitnamilegacy/openldap:2.6
+
+  solr:
+    hostname: solr
+    environment:
+      SOLR_OPTS: >-
+        -Dhost=solr
+        -DzkHost=zoo:2181

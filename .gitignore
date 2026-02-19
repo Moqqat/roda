@@ -17,14 +17,27 @@ roda-cas/overlays/
 .vscode/
 **/**/*.log.txt
 
-# Local dev overrides
+# Local dev overrides (DO NOT COMMIT)
 docker-compose.dev.local.yml
 env/dev.local.env
 
 # Local docker-compose overrides / backups
-**/docker-compose.override.y*ml
-**/docker-compose.devlocal.y*ml
+**/docker-compose.override.yml
+**/docker-compose.override.yaml
+**/docker-compose.devlocal.yml
+**/docker-compose.devlocal.yaml
 **/*.bak
+**/*~
 
-# Local instance props (om lokal)
+# Local instance props (DO NOT COMMIT)
 roda/config/roda-core.properties
+
+# Allow examples/templates to be committed
+!env/dev.local.env.example
+!docker-compose.dev.local.yml.example
+!roda/config/roda-core.properties.example
+!**/docker-compose.override.yml.example
+!**/docker-compose.override.yaml.example
+!**/docker-compose.devlocal.yml.example
+!**/docker-compose.devlocal.yaml.example
+
